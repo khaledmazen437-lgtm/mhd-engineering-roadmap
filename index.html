@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MHD Tech </title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <div class="nova-bg"></div>
+
+    <header class="cyber-header text-center">
+        <h1 class="glitch" data-text="MHD TECH">MHD TECH</h1>
+        <p class="cyber-subtitle">المخطط الهندسي (الترتيب من الأسهل للأصعب)</p>
+    </header>
+
+    <main class="container projects-grid">
+        
+        <div class="card-wrapper" onclick="openModal('proj1')">
+            <div class="cyber-card">
+                <div class="card-front">
+                    <span class="level-badge easy">مستوى 1</span>
+                    <h2>نظام الإنارة الذكي</h2>
+                    <p class="click-hint"><i class="fa-solid fa-crosshairs"></i> اضغط للتفاصيل</p>
+                </div>
+                <div id="proj1" class="hidden-details">
+                    <h3><i class="fa-solid fa-lightbulb"></i> نظام الإنارة الذكي للممرات</h3>
+                    <p>نظام أتمتة (Home Automation). يعتمد على اكتشاف حرارة الجسم البشري عبر حساس PIR، ليقوم بإعطاء أمر لريلاي بفتح دائرة كهربائية (220V). بمجرد خروج الشخص، يبدأ النظام في عد (30 ثانية) باستخدام مؤقت برمجي، ثم يفصل الكهرباء تلقائياً.</p>
+                    <h4>🛒 المشتريات (BOM):</h4>
+                    <ul>
+                        <li>ESP32 Development Board.</li>
+                        <li>حساس حركة HC-SR501 PIR Sensor.</li>
+                        <li>موديول Relay 1-Channel 5V.</li>
+                        <li>لمبة 220V، دواية، فيشة، وأسلاك مجدولة.</li>
+                    </ul>
+                    <h4>👥 المهام والخبرات:</h4>
+                    <ul>
+                        <li><strong>مهندس الهاردوير:</strong> توصيل خط الـ 220V بالريلاي وعزله بشريط لحام لمنع الماس الكهربائي.</li>
+                        <li><strong>مطور C++:</strong> قراءة إشارة الحساس، وبرمجة خوارزمية Timer (باستخدام millis).</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="card-wrapper" onclick="openModal('proj2')">
+            <div class="cyber-card">
+                <div class="card-front">
+                    <span class="level-badge medium">مستوى 2</span>
+                    <h2>مؤشر إشغال المكتبة</h2>
+                    <p class="click-hint"><i class="fa-solid fa-crosshairs"></i> اضغط للتفاصيل</p>
+                </div>
+                <div id="proj2" class="hidden-details">
+                    <h3><i class="fa-solid fa-users"></i> مؤشر إشغال المكتبة الذكي</h3>
+                    <p>نظام إحصائي حي. حساسين على الباب بمسافة 10 سم. قطع الحساس (أ) ثم (ب) = دخول، والعكس = خروج. إرسال العدد الصافي لـ Firebase وتحديد الحالة (مزدحمة، متوسطة، فارغة) على لوحة تحكم ويب.</p>
+                    <h4>🛒 المشتريات (BOM):</h4>
+                    <ul>
+                        <li>ESP32 Development Board.</li>
+                        <li>2 حساس IR Obstacle Avoidance Sensor.</li>
+                        <li>شاحن 5V للتشغيل الدائم.</li>
+                    </ul>
+                    <h4>👥 المهام والخبرات:</h4>
+                    <ul>
+                        <li><strong>مطور C++:</strong> خوارزمية تمنع العد المزدوج (Debouncing)، وتحديد الاتجاه، ورفع المتغيرات.</li>
+                        <li><strong>مطور Front-End:</strong> Dashboard بـ React و Tailwind تسحب الرقم وتغير لون الواجهة ديناميكياً.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="card-wrapper" onclick="openModal('proj3')">
+            <div class="cyber-card">
+                <div class="card-front">
+                    <span class="level-badge medium">مستوى 3</span>
+                    <h2>لوحة الإعلانات الرقمية</h2>
+                    <p class="click-hint"><i class="fa-solid fa-crosshairs"></i> اضغط للتفاصيل</p>
+                </div>
+                <div id="proj3" class="hidden-details">
+                    <h3><i class="fa-solid fa-desktop"></i> لوحة الإعلانات الرقمية الديناميكية</h3>
+                    <p>شاشة تُعلق في أروقة الكلية. تستدعي التنبيهات من API مخصص وتعرضها بشكل متحرك (Scrolling). الإدارة بالكامل من Admin Panel مبرمجة خصيصاً.</p>
+                    <h4>🛒 المشتريات (BOM):</h4>
+                    <ul>
+                        <li>ESP32 Development Board.</li>
+                        <li>شاشة ليدات MAX7219 Dot Matrix 4-in-1.</li>
+                        <li>محول طاقة خارجي 5V/3A Adapter.</li>
+                    </ul>
+                    <h4>👥 المهام والخبرات:</h4>
+                    <ul>
+                        <li><strong>مطور Full-Stack:</strong> بناء Admin Dashboard بـ React لكتابة الإعلان وحفظه في Node.js/Firebase.</li>
+                        <li><strong>مطور C++:</strong> استخدام مكتبة MD_Parola للـ Scrolling Text، ومكتبة ArduinoJson لاستقبال الـ API.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="card-wrapper" onclick="openModal('proj4')">
+            <div class="cyber-card">
+                <div class="card-front">
+                    <span class="level-badge hard">مستوى 4</span>
+                    <h2>شاشة قاعات المحاضرات</h2>
+                    <p class="click-hint"><i class="fa-solid fa-crosshairs"></i> اضغط للتفاصيل</p>
+                </div>
+                <div id="proj4" class="hidden-details">
+                    <h3><i class="fa-solid fa-calendar-days"></i> شاشة قاعات المحاضرات الذكية</h3>
+                    <p>شاشة ملونة على باب المدرج تتزامن مع الوقت (NTP). تسحب الجدول من API وتعرض: (المحاضرة الحالية، القادمة، والدكتور).</p>
+                    <h4>🛒 المشتريات (BOM):</h4>
+                    <ul>
+                        <li>ESP32 Development Board.</li>
+                        <li>شاشة ملونة TFT LCD 2.8" SPI (ILI9341).</li>
+                        <li>علبة أكريليك للتغليف (Enclosure).</li>
+                    </ul>
+                    <h4>👥 المهام والخبرات:</h4>
+                    <ul>
+                        <li><strong>مطور Web:</strong> بناء CMS مصغر لإدخال أيام وأوقات المحاضرات وتصديرها كـ JSON.</li>
+                        <li><strong>مطور C++:</strong> استخدام TFT_eSPI لرسم الواجهة، ومقارنة الوقت الحالي بالجدول.</li>
+                        <li><strong>مهندس الهاردوير:</strong> توصيل دقيق لأطراف الـ SPI (MOSI, MISO, SCK).</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="card-wrapper" onclick="openModal('proj5')">
+            <div class="cyber-card">
+                <div class="card-front">
+                    <span class="level-badge expert">مستوى 5</span>
+                    <h2>نظام الحضور بالـ RFID</h2>
+                    <p class="click-hint"><i class="fa-solid fa-crosshairs"></i> اضغط للتفاصيل</p>
+                </div>
+                <div id="proj5" class="hidden-details">
+                    <h3><i class="fa-solid fa-id-card"></i> نظام الحضور والانصراف (Full-Stack)</h3>
+                    <p>الطالب يمرر الكارت، الـ ESP32 يرسل الكود المشفر لـ Node.js API. السيرفر يسجل الحضور ويرد لتشغيل LED أخضر/أحمر وصوت إنذار.</p>
+                    <h4>🛒 المشتريات (BOM):</h4>
+                    <ul>
+                        <li>ESP32 Development Board.</li>
+                        <li>قارئ كروت RFID-RC522 + ميداليات ذكية.</li>
+                        <li>Active Buzzer + 2 LED + مقاومات.</li>
+                    </ul>
+                    <h4>👥 المهام والخبرات:</h4>
+                    <ul>
+                        <li><strong>مهندس Back-End:</strong> REST API يستقبل الطلبات ويسجلها في MySQL/MongoDB.</li>
+                        <li><strong>مطور Front-End:</strong> واجهة Admin لحظية لعرض الحضور.</li>
+                        <li><strong>مطور C++:</strong> برمجة بروتوكول SPI، وإدارة رد السيرفر لتفعيل الإنذار.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="card-wrapper" onclick="openModal('proj6')">
+            <div class="cyber-card">
+                <div class="card-front">
+                    <span class="level-badge cyber">مستوى 6</span>
+                    <h2>مراقب شبكات Wi-Fi (IDS)</h2>
+                    <p class="click-hint"><i class="fa-solid fa-crosshairs"></i> اضغط للتفاصيل</p>
+                </div>
+                <div id="proj6" class="hidden-details">
+                    <h3><i class="fa-solid fa-shield-halved"></i> مراقب الشبكات الأمني (Cybersecurity)</h3>
+                    <p>أداة Blue Team. يدخل الـ ESP32 في Promiscuous Mode لالتقاط حزم البيانات (Packets) في الهواء، واكتشاف هجمات الـ Deauth أو الشبكات المزيفة وعرض الـ MAC للمهاجم.</p>
+                    <h4>🛒 المشتريات (BOM):</h4>
+                    <ul>
+                        <li>ESP32 Development Board.</li>
+                        <li>شاشة دقيقة OLED 0.96" I2C.</li>
+                        <li>Active Buzzer + Power Bank للتشغيل الميداني.</li>
+                    </ul>
+                    <h4>👥 المهام والخبرات:</h4>
+                    <ul>
+                        <li><strong>خبير شبكات:</strong> فهم بروتوكول 802.11 وتمييز الـ Management frames.</li>
+                        <li><strong>مطور C++ متقدم:</strong> تفعيل Monitor Mode وتحليل الـ Packets لحظياً، وبرمجة الشاشة.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="card-wrapper" onclick="openModal('proj7')">
+            <div class="cyber-card">
+                <div class="card-front">
+                    <span class="level-badge master">مستوى 7</span>
+                    <h2>الروبوت الموجه بالويب</h2>
+                    <p class="click-hint"><i class="fa-solid fa-crosshairs"></i> اضغط للتفاصيل</p>
+                </div>
+                <div id="proj7" class="hidden-details">
+                    <h3><i class="fa-solid fa-robot"></i> الروبوت الجامعي الموجه بالويب</h3>
+                    <p>روبوت بعجلتين يتحرك بأوامر من Web App. مزود بذكاء ذاتي لتجنب الاصطدام. الـ ESP32 يعمل كـ Web Server يستقبل الأوامر من الهاتف عبر الواي فاي.</p>
+                    <h4>🛒 المشتريات (BOM):</h4>
+                    <ul>
+                        <li>شاسيه روبوت 2WD Smart Car Kit + L298N Motor Driver.</li>
+                        <li>ESP32 Development Board.</li>
+                        <li>3 حساسات Ultrasonic (HC-SR04).</li>
+                        <li>2 بطارية 18650، حامل، وموديول LM2596 لخفض الجهد.</li>
+                    </ul>
+                    <h4>👥 المهام والخبرات:</h4>
+                    <ul>
+                        <li><strong>مطور Front-End:</strong> تصميم Web App كعصا تحكم (Joystick) يتصل عبر WebSocket.</li>
+                        <li><strong>مهندس الهاردوير:</strong> تجميع ميكانيكي، وضبط مسارات الطاقة القوية لمنع ريستارت الـ ESP32.</li>
+                        <li><strong>مطور C++:</strong> خوارزميات PWM للسرعة، ودمج قراءات 3 حساسات لتفادي العقبات.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <div id="hologram-modal" class="modal-overlay">
+        <div class="cyber-modal-content">
+            <button class="close-btn" onclick="closeModal()">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <div class="modal-body" id="modal-content-area">
+                </div>
+        </div>
+    </div>
+
+    <script>
+        function openModal(projectId) {
+            const modal = document.getElementById('hologram-modal');
+            const contentArea = document.getElementById('modal-content-area');
+            const projectDetails = document.getElementById(projectId).innerHTML;
+            
+        
+            contentArea.innerHTML = projectDetails;
+            
+            
+            modal.style.display = 'flex';
+            setTimeout(() => {
+                modal.classList.add('active');
+            }, 10);
+        }
+
+        function closeModal() {
+            const modal = document.getElementById('hologram-modal');
+            modal.classList.remove('active');
+            setTimeout(() => {
+                modal.style.display = 'none';
+            }, 300); 
+        }
+
+        
+        window.onclick = function(event) {
+            const modal = document.getElementById('hologram-modal');
+            if (event.target == modal) {
+                closeModal();
+            }
+        }
+    </script>
+</body>
+</html>
